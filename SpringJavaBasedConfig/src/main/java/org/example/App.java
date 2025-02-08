@@ -10,6 +10,6 @@ public class App {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
 
-        Alien obj = context.getBean("alien", Alien.class);
+        Alien obj = context.getBean(Alien.class);
     }
 }

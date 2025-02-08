@@ -22,4 +22,25 @@ In Java based configuration we use ``AnnotationConfigApplicationContext()``
     --Example
 
 ``ApplicationContext context = new AnnotationConfigApplicationContext("AppConfig.Class");``
-in paranthesis we can use actual configuration file name (AppConfig.class)
+in parenthesis we can use actual configuration file name (AppConfig.class)
+
+
+* next create a class and `Alien` then Dependency Injection(simply spring create the object)
+
+```
+package org.example.config;
+
+import org.example.Alien;
+import org.example.App;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppConfig {
+
+    public Alien alien() {
+        return new Alien();
+    }
+}
+```
+
+simply it will create an object spring
