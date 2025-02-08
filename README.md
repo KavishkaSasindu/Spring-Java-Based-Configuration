@@ -45,3 +45,30 @@ public class AppConfig {
 ```
 
 simply it will create an object spring
+
+in here ``alien()`` is bean name.
+
+```context.getBean("alien",Alien.Class);```
+
+
+also we can specify the ``@Bean(name="alien"")``
+
+```
+package org.example.config;
+
+import org.example.Alien;
+import org.example.App;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppConfig {
+
+    @Bean(name="alien")
+    public Alien alien() {
+        return new Alien();
+    }
+}
+```
+
+
+#### also we can add ```    @Bean(name = {"alien","objectAlien"})```
